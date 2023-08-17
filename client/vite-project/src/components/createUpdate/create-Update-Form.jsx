@@ -21,7 +21,7 @@ const CreateUpdateForm = () => {
 
     (async () => {
       try {
-        const res = await axios.get(`http://localhost:8001/api/v1/readbyid/${id}`);
+        const res = await axios.get(`https://silver-sunflower-0ee049.netlify.app/api/v1/readbyid/${id}`);
         console.log("API response:", res.data);
 
         if (res.data && res.data.data && res.data.data[0]) {
