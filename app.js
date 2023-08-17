@@ -23,7 +23,10 @@ app.use(cors())
 app.use(helmet())
 app.use(mongoSanitize())
 app.use(hpp())
-
+app.get("/",(req,res)=>{
+    res.setHeader("Access-Control-Allow-Credentials", "true")
+    res.send("Api Is Running")
+})
 // Body Parser Implementation 
 
 app.use(bodyParser.json())
