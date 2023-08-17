@@ -1,6 +1,7 @@
 {
   "name": "vite-project",
   "private": true,
+  "proxy": "https://mernblog2.onrender.com",
   "version": "0.0.0",
   "type": "module",
   "scripts": {
