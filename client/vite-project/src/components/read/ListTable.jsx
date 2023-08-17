@@ -9,13 +9,13 @@ const ListTable = () => {
 
     useEffect(() => {
         (async () => {
-            const res = await axios.get("http://localhost:8001/api/v1/read");
+            const res = await axios.get("https://mernblog2.onrender.com/api/v1/read");
             setData(res.data['data']);
         })();
     }, [id]);
 
     const onDelete = async (id) => {
-        let URL = "http://localhost:8001/api/v1/deleteBlog/" + id;
+        let URL = "https://mernblog2.onrender.com/api/v1/deleteBlog/" + id;
         await axios.get(URL);
         setId(id);
     };

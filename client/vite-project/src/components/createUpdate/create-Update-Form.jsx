@@ -21,7 +21,7 @@ const CreateUpdateForm = () => {
 
     (async () => {
       try {
-        const res = await axios.get(`https://silver-sunflower-0ee049.netlify.app/api/v1/readbyid/${id}`);
+        const res = await axios.get(`https://mernblog2.onrender.com/api/v1/readbyid/${id}`);
         console.log("API response:", res.data);
 
         if (res.data && res.data.data && res.data.data[0]) {
@@ -52,9 +52,9 @@ const CreateUpdateForm = () => {
         position: toast.POSITION.TOP_CENTER
       });
     } else {
-      let url = "http://localhost:8001/api/v1//create";
+      let url = "https://mernblog2.onrender.com/api/v1//create";
       if (id) {
-        url = "http://localhost:8001/api/v1/updateBlog/" + id;
+        url = "https://mernblog2.onrender.com/api/v1/updateBlog/" + id;
       }
       let res = await axios.post(url, FormValue);
       if (res.status === 200) {

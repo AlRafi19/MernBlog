@@ -12,7 +12,7 @@ const SingleBlogPost = () => {
     useEffect(() => {
         async function fetchBlog() {
             try {
-                const response = await axios.get(`http://localhost:8001/api/v1/readbyid/${blogId}`);
+                const response = await axios.get(`https://mernblog2.onrender.com/api/v1/readbyid/${blogId}`);
                 setBlog(response.data["data"][0]);
                 setLoading(false);
             } catch (error) {
@@ -26,7 +26,7 @@ const SingleBlogPost = () => {
     const handleAddComment = async () => {
         if (comment.trim() !== '') {
             try {
-                const response = await axios.post(`http://localhost:8001/api/v1/addComment/${blogId}`, {
+                const response = await axios.post(`https://mernblog2.onrender.com/api/v1/addComment/${blogId}`, {
                     comment: comment
                 });
                 setComments([...comments, response.data]);
