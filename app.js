@@ -27,6 +27,9 @@ app.get("/",(req,res)=>{
     res.setHeader("Access-Control-Allow-Credentials", "true")
     res.send("Api Is Running")
 })
+app.use(cors({
+    origin: 'https://silver-sunflower-0ee049.netlify.app/'
+  }))
 // Body Parser Implementation 
 
 app.use(bodyParser.json())
